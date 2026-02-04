@@ -1108,7 +1108,7 @@ input[type="number"] {
     }
 
     .header {
-        border-radius: 0 0 var(--radius-3xl) var(--radius-3xl);
+        border-radius: 0;
     }
 
     .main-container {
@@ -1155,7 +1155,9 @@ input[type="number"] {
     }
 }
 
-/* ========== DARK MODE SUPPORT ========== */
+/* ========== DARK MODE - DESABILITADO (Estilo Clean) ========== */
+/* Para habilitar dark mode, descomente o bloco abaixo */
+/*
 @media (prefers-color-scheme: dark) {
     :root {
         --gray-50: #1f2937;
@@ -1171,41 +1173,27 @@ input[type="number"] {
     }
 
     body {
-        background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        background: #0f172a;
         color: var(--gray-800);
     }
 
     .card,
     .kpi-card {
-        background: rgba(30, 41, 59, 0.9);
+        background: #1e293b;
         border-color: rgba(255, 255, 255, 0.1);
     }
 
     .form-input,
     .form-select {
-        background: rgba(15, 23, 42, 0.8);
+        background: #0f172a;
         color: white;
-    }
-
-    .form-input:focus,
-    .form-select:focus {
-        background: rgba(15, 23, 42, 1);
-    }
-
-    .transaction-item:hover {
-        background: rgba(255, 255, 255, 0.05);
     }
 
     .modal {
         background: #1e293b;
     }
-
-    .stats-box,
-    .quick-btn,
-    .top-expense-item {
-        background: rgba(15, 23, 42, 0.6);
-    }
 }
+*/
 
 /* ========== REDUCED MOTION ========== */
 @media (prefers-reduced-motion: reduce) {
@@ -1256,29 +1244,43 @@ input[type="number"] {
 
 /* ========== MOBILE OPTIMIZATIONS ========== */
 @media (max-width: 575.98px) {
+    /* Forçar estilo clean em mobile */
     body {
-        background: #ffffff;
+        background: #ffffff !important;
+        color: var(--gray-900) !important;
     }
 
     .header {
+        background: #ffffff !important;
+        color: var(--gray-900) !important;
         padding: var(--spacing-md);
         padding-top: calc(var(--spacing-md) + env(safe-area-inset-top, 0));
+        box-shadow: 0 1px 0 var(--gray-200);
     }
 
     .brand-title h1 {
         font-size: 1.1rem;
+        color: var(--gray-900) !important;
     }
 
     .brand-subtitle {
         font-size: 0.6rem;
+        color: var(--gray-500) !important;
     }
 
     .balance-value {
         font-size: 1.5rem;
+        color: var(--success-600) !important;
+        text-shadow: none !important;
+    }
+
+    .balance-value.negative {
+        color: var(--danger-600) !important;
     }
 
     .balance-label {
         font-size: 0.6rem;
+        color: var(--gray-500) !important;
     }
 
     .kpi-grid {
@@ -1288,27 +1290,51 @@ input[type="number"] {
     .kpi-card {
         padding: var(--spacing-sm);
         border-radius: var(--radius-lg);
+        background: var(--gray-50) !important;
+        border: 1px solid var(--gray-200) !important;
     }
 
     .kpi-label {
         font-size: 0.6rem;
         margin-bottom: 2px;
+        color: var(--gray-700) !important;
     }
 
     .kpi-value {
         font-size: 0.95rem;
     }
 
+    .kpi-value.income {
+        color: var(--success-700) !important;
+    }
+
+    .kpi-value.expense {
+        color: var(--danger-700) !important;
+    }
+
+    .kpi-value.efficiency {
+        color: var(--primary-700) !important;
+    }
+
     .tab-navigation {
         padding: 3px;
         gap: 3px;
         border-radius: var(--radius-md);
+        background: var(--gray-100) !important;
+        border: 1px solid var(--gray-200) !important;
     }
 
     .tab-btn {
         padding: var(--spacing-xs);
         font-size: 0.65rem;
         border-radius: var(--radius-sm);
+        background: white !important;
+        color: var(--gray-700) !important;
+    }
+
+    .tab-btn.active {
+        background: var(--gray-900) !important;
+        color: white !important;
     }
 
     .tab-btn .tab-icon {
@@ -1319,6 +1345,8 @@ input[type="number"] {
         padding: var(--spacing-md);
         border-radius: var(--radius-lg);
         margin-bottom: var(--spacing-sm);
+        background: #ffffff !important;
+        border: 1px solid var(--gray-200) !important;
     }
 
     .card-header {
@@ -1327,6 +1355,7 @@ input[type="number"] {
 
     .card-title {
         font-size: 0.7rem;
+        color: var(--gray-800) !important;
     }
 
     .form-group {
@@ -1336,6 +1365,7 @@ input[type="number"] {
     .form-label {
         font-size: 0.7rem;
         margin-bottom: 4px;
+        color: var(--gray-700) !important;
     }
 
     .form-input,
@@ -1343,6 +1373,13 @@ input[type="number"] {
         padding: 0.75rem;
         font-size: 1rem;
         border-radius: var(--radius-md);
+        background: #ffffff !important;
+        border: 1px solid var(--gray-300) !important;
+        color: var(--gray-900) !important;
+    }
+
+    .form-input::placeholder {
+        color: var(--gray-400) !important;
     }
 
     .form-input.large {
@@ -1351,6 +1388,7 @@ input[type="number"] {
 
     .transaction-item {
         padding: var(--spacing-sm);
+        background: #ffffff !important;
     }
 
     .transaction-indicator {
@@ -1360,20 +1398,39 @@ input[type="number"] {
 
     .transaction-desc {
         font-size: 0.9rem;
+        color: var(--gray-900) !important;
     }
 
-    .transaction-category,
+    .transaction-category {
+        font-size: 0.65rem;
+        color: var(--gray-600) !important;
+    }
+    
     .transaction-date {
         font-size: 0.65rem;
+        color: var(--gray-600) !important;
     }
 
     .transaction-value {
         font-size: 0.95rem;
     }
 
+    .transaction-value.income {
+        color: var(--success-700) !important;
+    }
+
+    .transaction-value.expense {
+        color: var(--danger-700) !important;
+    }
+
     .btn-icon {
         width: 36px;
         height: 36px;
+    }
+
+    .btn-primary {
+        background: var(--gray-900) !important;
+        color: white !important;
     }
 
     .quick-actions {
@@ -1383,18 +1440,40 @@ input[type="number"] {
     .quick-btn {
         padding: var(--spacing-xs);
         font-size: 0.65rem;
+        background: var(--gray-50) !important;
+        border: 1px solid var(--gray-200) !important;
+        color: var(--gray-700) !important;
+    }
+
+    .quick-btn.income {
+        background: var(--success-50) !important;
+        color: var(--success-700) !important;
     }
 
     .quick-btn .quick-icon {
         font-size: 1.1rem;
     }
 
+    .stats-box {
+        background: var(--gray-50) !important;
+        border: 1px solid var(--gray-200) !important;
+    }
+
     .stats-label {
         font-size: 0.75rem;
+        color: var(--gray-700) !important;
     }
 
     .stats-value {
         font-size: 0.9rem;
+    }
+
+    .stats-value.primary {
+        color: var(--primary-700) !important;
+    }
+
+    .stats-value.success {
+        color: var(--success-700) !important;
     }
 
     .progress-ring {
@@ -1409,14 +1488,17 @@ input[type="number"] {
 
     .progress-percent {
         font-size: 1.75rem;
+        color: var(--gray-900) !important;
     }
 
     .progress-label-small {
         font-size: 0.6rem;
+        color: var(--gray-600) !important;
     }
 
     .progress-description {
         font-size: 0.9rem;
+        color: var(--gray-700) !important;
     }
 
     .chart-container {
@@ -1429,6 +1511,7 @@ input[type="number"] {
 
     .top-expense-item {
         padding: var(--spacing-xs) var(--spacing-sm);
+        background: var(--gray-50) !important;
     }
 
     .top-expense-rank {
@@ -1439,10 +1522,12 @@ input[type="number"] {
 
     .top-expense-desc {
         font-size: 0.8rem;
+        color: var(--gray-900) !important;
     }
 
     .top-expense-value {
         font-size: 0.8rem;
+        color: var(--danger-700) !important;
     }
 
     .filter-bar {
@@ -1462,25 +1547,35 @@ input[type="number"] {
         font-size: 1.1rem;
         bottom: var(--spacing-md);
         right: var(--spacing-md);
+        background: var(--gray-900) !important;
     }
 
     .modal {
         padding: var(--spacing-md);
         border-radius: var(--radius-lg);
+        background: #ffffff !important;
     }
 
     .modal-title {
         font-size: 1.1rem;
+        color: var(--gray-900) !important;
     }
 
     .modal-description {
         font-size: 0.75rem;
+        color: var(--gray-600) !important;
     }
 
     .toast {
         bottom: 4rem;
         font-size: 0.75rem;
         padding: var(--spacing-xs) var(--spacing-md);
+        background: var(--gray-900) !important;
+        color: white !important;
+    }
+
+    .empty-state-text {
+        color: var(--gray-500) !important;
     }
 }
 
