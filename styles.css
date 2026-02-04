@@ -331,10 +331,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kpi-card {
-    background: var(--gradient-glass);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: white;
+    border: 1px solid var(--gray-200);
     border-radius: var(--radius-2xl);
     padding: var(--spacing-md);
     box-shadow: var(--shadow-lg);
@@ -371,29 +369,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kpi-label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--gray-500);
+    color: var(--gray-700);
     margin-bottom: var(--spacing-xs);
 }
 
 .kpi-value {
-    font-size: clamp(0.875rem, 3vw, 1.125rem);
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
     font-weight: 800;
 }
 
 .kpi-value.income {
-    color: var(--success-600);
+    color: var(--success-700);
 }
 
 .kpi-value.expense {
-    color: var(--danger-600);
+    color: var(--danger-700);
 }
 
 .kpi-value.efficiency {
-    color: var(--primary-600);
+    color: var(--primary-700);
 }
 
 /* ========== TAB NAVIGATION ========== */
@@ -410,16 +408,16 @@ h1, h2, h3, h4, h5, h6 {
 .tab-btn {
     flex: 1;
     padding: var(--spacing-sm) var(--spacing-xs);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     border: none;
-    background: transparent;
+    background: white;
     border-radius: var(--radius-lg);
     cursor: pointer;
     transition: var(--transition-base);
-    color: var(--gray-600);
+    color: var(--gray-700);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,13 +441,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========== CARDS ========== */
 .card {
-    background: var(--gradient-glass);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: white;
+    border: 1px solid var(--gray-200);
     border-radius: var(--radius-3xl);
     padding: var(--spacing-lg);
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
     margin-bottom: var(--spacing-md);
     animation: fadeInUp 0.3s ease-out;
 }
@@ -469,11 +465,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-title {
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--gray-500);
+    color: var(--gray-800);
 }
 
 /* ========== FORMS ========== */
@@ -483,11 +479,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-label {
     display: block;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--gray-500);
+    color: var(--gray-700);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -495,15 +491,15 @@ h1, h2, h3, h4, h5, h6 {
 .form-select {
     width: 100%;
     padding: var(--spacing-md);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     font-family: inherit;
-    background: var(--gray-50);
-    border: 2px solid transparent;
+    background: var(--gray-100);
+    border: 2px solid var(--gray-300);
     border-radius: var(--radius-xl);
     outline: none;
     transition: var(--transition-base);
-    color: var(--gray-800);
+    color: var(--gray-900);
 }
 
 .form-input:focus,
@@ -613,12 +609,12 @@ input[type="number"] {
 }
 
 .quick-btn {
-    padding: var(--spacing-sm);
-    font-size: 0.65rem;
-    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-xs);
+    font-size: 0.75rem;
+    font-weight: 700;
     font-family: inherit;
-    background: var(--gray-50);
-    border: 2px solid transparent;
+    background: var(--gray-100);
+    border: 2px solid var(--gray-300);
     border-radius: var(--radius-lg);
     cursor: pointer;
     transition: var(--transition-base);
@@ -626,6 +622,7 @@ input[type="number"] {
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    color: var(--gray-800);
 }
 
 .quick-btn:hover {
@@ -700,9 +697,9 @@ input[type="number"] {
 }
 
 .transaction-desc {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--gray-800);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -716,16 +713,17 @@ input[type="number"] {
 }
 
 .transaction-category {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: var(--gray-400);
+    color: var(--gray-600);
 }
 
 .transaction-date {
-    font-size: 0.6rem;
-    color: var(--gray-400);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gray-600);
 }
 
 .transaction-actions {
@@ -735,17 +733,17 @@ input[type="number"] {
 }
 
 .transaction-value {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 800;
     white-space: nowrap;
 }
 
 .transaction-value.income {
-    color: var(--success-600);
+    color: var(--success-700);
 }
 
 .transaction-value.expense {
-    color: var(--danger-600);
+    color: var(--danger-700);
 }
 
 /* ========== FILTER BAR ========== */
@@ -802,22 +800,22 @@ input[type="number"] {
 }
 
 .progress-percent {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 800;
-    color: var(--gray-800);
+    color: var(--gray-900);
 }
 
 .progress-label-small {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--gray-400);
+    color: var(--gray-600);
 }
 
 .progress-description {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--gray-500);
+    color: var(--gray-700);
     margin-top: var(--spacing-md);
 }
 
@@ -841,22 +839,22 @@ input[type="number"] {
 }
 
 .stats-label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: var(--gray-500);
+    color: var(--gray-700);
 }
 
 .stats-value {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 800;
 }
 
 .stats-value.primary {
-    color: var(--primary-600);
+    color: var(--primary-700);
 }
 
 .stats-value.success {
-    color: var(--success-600);
+    color: var(--success-700);
 }
 
 /* ========== CHARTS ========== */
@@ -897,15 +895,15 @@ input[type="number"] {
 .top-expense-desc {
     flex: 1;
     margin-left: var(--spacing-sm);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--gray-700);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gray-900);
 }
 
 .top-expense-value {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 800;
-    color: var(--danger-600);
+    color: var(--danger-700);
 }
 
 /* ========== EMPTY STATE ========== */
@@ -1274,5 +1272,283 @@ input[type="number"] {
 
     body {
         padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+    }
+}
+
+/* ========== MOBILE OPTIMIZATIONS ========== */
+@media (max-width: 575.98px) {
+    /* Força contraste alto em mobile */
+    body {
+        background: var(--gray-100);
+    }
+
+    /* Header mais limpo */
+    .header {
+        padding: var(--spacing-md);
+        padding-top: calc(var(--spacing-md) + env(safe-area-inset-top, 0));
+    }
+
+    .brand-title h1 {
+        font-size: 1.1rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.6rem;
+    }
+
+    .balance-value {
+        font-size: 1.5rem;
+    }
+
+    .balance-label {
+        font-size: 0.6rem;
+    }
+
+    /* KPIs mais legíveis */
+    .kpi-grid {
+        gap: var(--spacing-xs);
+    }
+
+    .kpi-card {
+        padding: var(--spacing-sm);
+        border-radius: var(--radius-xl);
+    }
+
+    .kpi-label {
+        font-size: 0.6rem;
+        margin-bottom: 2px;
+    }
+
+    .kpi-value {
+        font-size: 0.95rem;
+    }
+
+    /* Tabs mais acessíveis */
+    .tab-navigation {
+        padding: 3px;
+        gap: 3px;
+        border-radius: var(--radius-lg);
+    }
+
+    .tab-btn {
+        padding: var(--spacing-xs);
+        font-size: 0.65rem;
+        border-radius: var(--radius-md);
+    }
+
+    .tab-btn .tab-icon {
+        font-size: 1.1rem;
+    }
+
+    /* Cards mais compactos */
+    .card {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-2xl);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .card-header {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .card-title {
+        font-size: 0.7rem;
+    }
+
+    /* Forms mais legíveis */
+    .form-group {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .form-label {
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+    }
+
+    .form-input,
+    .form-select {
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: var(--radius-lg);
+    }
+
+    .form-input.large {
+        font-size: 1.25rem;
+    }
+
+    /* Transações mais legíveis */
+    .transaction-item {
+        padding: var(--spacing-sm);
+    }
+
+    .transaction-indicator {
+        width: 3px;
+        height: 35px;
+    }
+
+    .transaction-desc {
+        font-size: 0.9rem;
+    }
+
+    .transaction-category,
+    .transaction-date {
+        font-size: 0.65rem;
+    }
+
+    .transaction-value {
+        font-size: 0.95rem;
+    }
+
+    .btn-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Quick actions mais legíveis */
+    .quick-actions {
+        gap: var(--spacing-xs);
+    }
+
+    .quick-btn {
+        padding: var(--spacing-xs);
+        font-size: 0.65rem;
+    }
+
+    .quick-btn .quick-icon {
+        font-size: 1.1rem;
+    }
+
+    /* Stats mais legíveis */
+    .stats-label {
+        font-size: 0.75rem;
+    }
+
+    .stats-value {
+        font-size: 0.9rem;
+    }
+
+    /* Progress ring */
+    .progress-ring {
+        width: 140px;
+        height: 140px;
+    }
+
+    .progress-ring svg {
+        width: 140px;
+        height: 140px;
+    }
+
+    .progress-ring-bg,
+    .progress-ring-fill {
+        cx: 70;
+        cy: 70;
+        r: 60;
+    }
+
+    .progress-percent {
+        font-size: 1.75rem;
+    }
+
+    .progress-label-small {
+        font-size: 0.6rem;
+    }
+
+    .progress-description {
+        font-size: 0.9rem;
+    }
+
+    /* Charts menores */
+    .chart-container {
+        height: 200px;
+    }
+
+    .chart-container.small {
+        height: 150px;
+    }
+
+    /* Top expenses */
+    .top-expense-item {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .top-expense-rank {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+
+    .top-expense-desc {
+        font-size: 0.8rem;
+    }
+
+    .top-expense-value {
+        font-size: 0.8rem;
+    }
+
+    /* Filter bar */
+    .filter-bar {
+        flex-wrap: wrap;
+    }
+
+    .filter-bar .form-select,
+    .filter-bar .form-input {
+        flex: 1 1 45%;
+        font-size: 0.75rem;
+        padding: var(--spacing-sm);
+    }
+
+    /* FAB menor */
+    .fab {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+
+    /* Modal mais compacto */
+    .modal {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-2xl);
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-description {
+        font-size: 0.75rem;
+    }
+
+    /* Toast */
+    .toast {
+        bottom: 4rem;
+        font-size: 0.7rem;
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+}
+
+/* ========== HIGH CONTRAST MODE ========== */
+@media (prefers-contrast: high) {
+    .card,
+    .kpi-card {
+        border-width: 2px;
+        border-color: var(--gray-900);
+    }
+
+    .form-input,
+    .form-select {
+        border-width: 2px;
+        border-color: var(--gray-700);
+    }
+
+    .transaction-desc {
+        color: black;
+    }
+
+    .kpi-label,
+    .form-label,
+    .card-title {
+        color: var(--gray-900);
     }
 }
